@@ -41,3 +41,10 @@ Antarmuka Responsif: Desain UI yang menyesuaikan dengan ukuran layar dan memberi
 
 - Python 3.x
 - Server MySQL yang sedang berjalan
+
+# Tampilan Antarmuka
+![Login](Image_SS/login.png)
+![Dashboard](Image_SS/dashboard.png)
+![Management_Pelanggan](Image_SS/pelanggan.png)
+![Data_Kendaraan](Image_SS/kendaraan.png)
+![Service](Image_SS/service.png)

@@ -437,7 +437,7 @@ class DashboardApp:
         self.clear_content()
         self.selected_id_servis = None  # Simpan ID servis yang dipilih
 
-        tk.Label(self.content, text="Riwayat Servis", font=("Arial", 16, "bold"), bg="white").pack(pady=10)
+        tk.Label(self.content, text="Servis", font=("Arial", 16, "bold"), bg="white").pack(pady=10)
 
         form_frame = tk.Frame(self.content, bg="white")
         form_frame.pack(pady=10)
@@ -453,7 +453,7 @@ class DashboardApp:
         tanggal_entry.grid(row=1, column=1, padx=5, pady=5)
 
         tk.Label(form_frame, text="Keluhan:").grid(row=2, column=0, sticky="w")
-        keluhan_entry = tk.Entry(form_frame)
+        keluhan_entry = tk.Text(form_frame, height=5, width=15, padx=5)
         keluhan_entry.grid(row=2, column=1, padx=5, pady=5)
 
         tk.Label(form_frame, text="Tindakan:").grid(row=3, column=0, sticky="w")
@@ -627,8 +627,8 @@ class DashboardApp:
                 id_kendaraan_entry.delete(0, tk.END)
                 id_kendaraan_entry.insert(0, data[1])
                 tanggal_entry.set_date(data[2])
-                keluhan_entry.delete(0, tk.END)
-                keluhan_entry.insert(0, data[3])
+                keluhan_entry.delete("1.0", tk.END)
+                keluhan_entry.insert("1.0", data[3])
                 tindakan_entry.delete(0, tk.END)
                 tindakan_entry.insert(0, data[4])
                 biaya_entry.delete(0, tk.END)
